@@ -136,7 +136,7 @@ a {
 .sidebar__label {
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-size: 0.78rem;
+  font-size: 1.0rem;
   font-weight: 700;
   color: var(--accent);
 }
@@ -148,7 +148,7 @@ a {
 
 .site-nav a {
   display: block;
-  padding: 10px 0;
+  padding: 10px 12px;
   border-radius: 14px;
   text-decoration: none;
   color: var(--muted);
@@ -663,7 +663,7 @@ a {
 
 .subpage-shell {
   width: min(1080px, calc(100% - 32px));
-  margin: 24px auto 40px;
+  margin: 0 auto 40px;
   display: grid;
   gap: 24px;
 }

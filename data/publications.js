@@ -1,35 +1,35 @@
 window.publicationFilterGroups = [
   {
-    label: "Recognition",
-    matches: ["Species Recognition", "Fine-Grained Recognition", "Plants", "Fungi", "Snakes", "Computer Vision", "Zero-Shot Learning", "Sea Turtles"]
+    label: "Species Recognition",
+    matches: ["Species Recognition", "Fine-Grained Recognition", "Plants", "Fungi", "Snakes"]
   },
   {
-    label: "Re-Identification",
-    matches: ["Wildlife Re-Identification", "Pose Estimation", "Endangered Species", "Wildlife Monitoring"]
+    label: "Animal Re-ID",
+    matches: ["Wildlife Re-Identification", "Pose Estimation", "Endangered Species", "Wildlife Monitoring", "Sea Turtles"]
   },
   {
-    label: "Species Distribution",
+    label: "Species Distribution Modeling",
     matches: ["Species Distribution Modeling", "GeoLifeCLEF", "Remote Sensing", "Biodiversity AI", "Deep Learning"]
   },
   {
-    label: "Benchmarks & Datasets",
-    matches: ["Benchmarks", "Datasets", "Challenges", "Open Source", "Open Set Recognition"]
+    label: "Datasets",
+    matches: ["Datasets", "Open Source", "Citizen Science"]
   },
   {
     label: "LifeCLEF",
     matches: ["LifeCLEF"]
   },
   {
-    label: "Applied AI",
-    matches: ["Applied AI", "Environmental Monitoring", "Detection", "Global Health", "Robustness", "Transformers", "OCR", "UI Detection", "Segmentation", "Citizen Science", "Health", "VQA", "Autonomous Driving"]
+    label: "Other",
+    matches: ["OCR", "UI Detection", "Segmentation", "VQA"]
   }
 ];
 
 window.selectedPublicationTitles = [
   "CzechLynx: A Dataset for Individual Identification and Pose Estimation of the Eurasian Lynx",
-  "FungiTastic: A Multi-Modal Dataset and Benchmark for Image Categorization",
   "GeoPlant: Spatial Plant Species Prediction Dataset",
   "WildlifeDatasets: An Open-Source Toolkit for Animal Re-Identification",
+  "FungiTastic: A Multi-Modal Dataset and Benchmark for Image Categorization",
   "Automatic Fungi Recognition: Deep Learning Meets Mycology",
   "Plant recognition by AI: Deep neural nets, transformers, and kNN in deep embeddings",
   "An artificial intelligence model to identify snakes from across the world: Opportunities and challenges for global health and herpetology"
@@ -63,6 +63,54 @@ window.publicationsData = [
   },
   {
     year: 2025,
+    title: "Join FunDive and help mycologists gain a deeper understanding of fungal diversity in Europe!",
+    venue: "Field Mycology, 2025",
+    authors: "Louis Mielke, Danny Haelewaters, Sergio De-Miguel, Vasco Fachada, Andrin Gross, Håvard Kauserud, Franz-Sebastian Krah, Tuula Niskanen, Jorinde Nuytinck, Lukas Picek, et al.",
+    href: "https://doi.org/10.63482/php2v621",
+    publicationType: "Journal",
+    topics: ["Fungi", "Applied AI"]
+  },
+  {
+    year: 2025,
+    title: "Zero-Shot Hazard Identification in Autonomous Driving: A Case Study on the COOOL Benchmark",
+    venue: "Proceedings of the Winter Conference on Applications of Computer Vision, 2025",
+    authors: "Lukas Picek, Vojtech Cermak, Marek Hanzl",
+    href: "https://openaccess.thecvf.com/content/WACV2025W/COOOL/papers/Picek_Zero-shot_hazard_identification_in_Autonomous_Driving_A_Case_Study_on_WACVW_2025_paper.pdf",
+    topics: ["Zero-Shot Learning", "Autonomous Driving"]
+  },
+  {
+    year: 2025,
+    title: "Mapping Biodiversity at Very-High Resolution in Europe",
+    venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2025",
+    authors: "Cesar Leblanc, Lukas Picek, Benjamin Deneu, Pierre Bonnet, Maximilien Servajean, Remi Palard, Alexis Joly",
+    topics: ["Species Distribution Modeling", "Biodiversity AI", "Remote Sensing"]
+  },
+  {
+    year: 2025,
+    title: "2COOOL: 2nd Workshop on the Challenge Of Out-Of-Label Hazards in Autonomous Driving",
+    venue: "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops, 2025",
+    authors: "Ali K. AlShami, Ryan Rabinowitz, Maged Shoman, Jianwu Fang, Lukas Picek, Shao-Yuan Lo, Steve Cruz, Khang Nhut Lam, Nachiket Kamod, Lei-Lei Li, Jugal Kalita, Terrance E. Boult",
+    href: "https://openaccess.thecvf.com/content/ICCV2025W/2COOOL/papers/AlShami_2COOOL_2nd_Workshop_on_the_Challenge_Of_Out-Of-Label_Hazards_in_ICCVW_2025_paper.pdf",
+    topics: ["Autonomous Driving", "Benchmarks", "Applied AI"]
+  },
+  {
+    year: 2025,
+    title: "LifeCLEF 2025 Teaser: Challenges on Species Presence Prediction and Identification, and Individual Animal Identification",
+    venue: "ECIR 2025",
+    authors: "Alexis Joly, Herve Goeau, Stefan Kahl, Lukas Picek, Christophe Botella, Diego Marcos, Maximilien Servajean, Cesar Leblanc, Theo Larcher, Benjamin Deneu, and others",
+    href: "https://doi.org/10.1007/978-3-031-88720-8_57",
+    topics: ["LifeCLEF", "Benchmarks"]
+  },
+  {
+    year: 2025,
+    title: "Overview of LifeCLEF 2025: Challenges on Species Presence Prediction and Identification, and Individual Animal Identification",
+    venue: "CLEF 2025",
+    authors: "Lukas Picek, Stefan Kahl, Herve Goeau, Lukas Adam, Theo Larcher, Cesar Leblanc, Maximilien Servajean, Klara Janouskova, Jiri Matas, Vojtech Cermak, Kostas Papafitsoros, Robert Planque, Willem-Pier Vellinga, Holger Klinck, Tom Denton, Juan Sebastian Canas, Giulio Martellucci, Fabrice Vinatier, Pierre Bonnet, Alexis Joly",
+    href: "https://doi.org/10.1007/978-3-032-04354-2_19",
+    topics: ["Benchmarks", "Challenges", "Species Recognition", "LifeCLEF"]
+  },
+  {
+    year: 2025,
     title: "Overview of AnimalCLEF 2025: Recognizing Individual Animals in Images",
     venue: "CLEF 2025 Working Notes",
     authors: "Lukas Adam, Kostas Papafitsoros, Roman Kovar, Vojtech Cermak, Lukas Picek",
@@ -86,70 +134,6 @@ window.publicationsData = [
     topics: ["Fungi", "Benchmarks", "LifeCLEF"]
   },
   {
-    year: 2025,
-    title: "2COOOL: 2nd Workshop on the Challenge Of Out-Of-Label Hazards in Autonomous Driving",
-    venue: "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops, 2025",
-    authors: "Ali K. AlShami, Ryan Rabinowitz, Maged Shoman, Jianwu Fang, Lukas Picek, Shao-Yuan Lo, Steve Cruz, Khang Nhut Lam, Nachiket Kamod, Lei-Lei Li, Jugal Kalita, Terrance E. Boult",
-    href: "https://openaccess.thecvf.com/content/ICCV2025W/2COOOL/papers/AlShami_2COOOL_2nd_Workshop_on_the_Challenge_Of_Out-Of-Label_Hazards_in_ICCVW_2025_paper.pdf",
-    topics: ["Autonomous Driving", "Benchmarks", "Applied AI"]
-  },
-  {
-    year: 2025,
-    title: "Overview of LifeCLEF 2025: Challenges on Species Presence Prediction and Identification, and Individual Animal Identification",
-    venue: "CLEF 2025",
-    authors: "Lukas Picek, Stefan Kahl, Herve Goeau, Lukas Adam, Theo Larcher, Cesar Leblanc, Maximilien Servajean, Klara Janouskova, Jiri Matas, Vojtech Cermak, Kostas Papafitsoros, Robert Planque, Willem-Pier Vellinga, Holger Klinck, Tom Denton, Juan Sebastian Canas, Giulio Martellucci, Fabrice Vinatier, Pierre Bonnet, Alexis Joly",
-    href: "https://doi.org/10.1007/978-3-032-04354-2_19",
-    topics: ["Benchmarks", "Challenges", "Species Recognition", "LifeCLEF"]
-  },
-  {
-    year: 2025,
-    title: "Join FunDive and help mycologists gain a deeper understanding of fungal diversity in Europe!",
-    venue: "Field Mycology, 2025",
-    authors: "Louis Mielke, Danny Haelewaters, Sergio De-Miguel, Vasco Fachada, Andrin Gross, Håvard Kauserud, Franz-Sebastian Krah, Tuula Niskanen, Jorinde Nuytinck, Lukas Picek, et al.",
-    href: "https://doi.org/10.63482/php2v621",
-    publicationType: "Journal",
-    topics: ["Fungi", "Applied AI", "Citizen Science"]
-  },
-  {
-    year: 2025,
-    title: "LifeCLEF 2025 Teaser: Challenges on Species Presence Prediction and Identification, and Individual Animal Identification",
-    venue: "ECIR 2025",
-    authors: "Alexis Joly, Herve Goeau, Stefan Kahl, Lukas Picek, Christophe Botella, Diego Marcos, Maximilien Servajean, Cesar Leblanc, Theo Larcher, Benjamin Deneu, and others",
-    href: "https://doi.org/10.1007/978-3-031-88720-8_57",
-    topics: ["LifeCLEF", "Benchmarks", "Species Distribution Modeling"]
-  },
-  {
-    year: 2025,
-    title: "Zero-Shot Hazard Identification in Autonomous Driving: A Case Study on the COOOL Benchmark",
-    venue: "Proceedings of the Winter Conference on Applications of Computer Vision, 2025",
-    authors: "Lukas Picek, Vojtech Cermak, Marek Hanzl",
-    href: "https://openaccess.thecvf.com/content/WACV2025W/COOOL/papers/Picek_Zero-shot_hazard_identification_in_Autonomous_Driving_A_Case_Study_on_WACVW_2025_paper.pdf",
-    topics: ["Benchmarks", "Zero-Shot Learning", "Autonomous Driving"]
-  },
-  {
-    year: 2025,
-    title: "Mapping Biodiversity at Very-High Resolution in Europe",
-    venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2025",
-    authors: "Cesar Leblanc, Lukas Picek, Benjamin Deneu, Pierre Bonnet, Maximilien Servajean, Remi Palard, Alexis Joly",
-    topics: ["Species Distribution Modeling", "Biodiversity AI", "Remote Sensing"]
-  },
-  {
-    year: 2024,
-    title: "Towards Zero-Shot Camera Trap Image Categorization",
-    venue: "European Conference on Computer Vision (ECCV) Workshops, 2024",
-    authors: "Jiri Vyskocil, Lukas Picek",
-    href: "https://doi.org/10.1007/978-3-031-92387-6_3",
-    topics: ["Wildlife Monitoring", "Zero-Shot Learning", "Computer Vision"]
-  },
-  {
-    year: 2024,
-    title: "WildFusion: Individual Animal Identification with Calibrated Similarity Fusion",
-    venue: "European Conference on Computer Vision (ECCV) Workshops, 2024",
-    authors: "Vojtech Cermak, Lukas Picek, Lukas Adam, Lukas Neumann, Jiri Matas",
-    href: "https://doi.org/10.1007/978-3-031-92387-6_2",
-    topics: ["Wildlife Re-Identification", "Computer Vision", "Robustness"]
-  },
-  {
     year: 2024,
     title: "WildlifeDatasets: An Open-Source Toolkit for Animal Re-Identification",
     venue: "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2024",
@@ -169,6 +153,22 @@ window.publicationsData = [
   },
   {
     year: 2024,
+    title: "Towards Zero-Shot Camera Trap Image Categorization",
+    venue: "European Conference on Computer Vision (ECCV) Workshops, 2024",
+    authors: "Jiri Vyskocil, Lukas Picek",
+    href: "https://doi.org/10.1007/978-3-031-92387-6_3",
+    topics: ["Wildlife Monitoring", "Zero-Shot Learning", "Computer Vision"]
+  },
+  {
+    year: 2024,
+    title: "WildFusion: Individual Animal Identification with Calibrated Similarity Fusion",
+    venue: "European Conference on Computer Vision (ECCV) Workshops, 2024",
+    authors: "Vojtech Cermak, Lukas Picek, Lukas Adam, Lukas Neumann, Jiri Matas",
+    href: "https://doi.org/10.1007/978-3-031-92387-6_2",
+    topics: ["Wildlife Re-Identification", "Computer Vision", "Robustness"]
+  },
+  {
+    year: 2024,
     title: "The Hitchhiker's Guide to Endangered Species Pose Estimation",
     venue: "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2024",
     authors: "Jakub Straka, Marek Hruz, Lukas Picek",
@@ -185,6 +185,22 @@ window.publicationsData = [
   },
   {
     year: 2024,
+    title: "SeaTurtleID2022: A Long-Span Dataset for Reliable Sea Turtle Re-Identification",
+    venue: "IEEE/CVF WACV, 2024",
+    authors: "Lukas Adam, Vojtech Cermak, Kostas Papafitsoros, Lukas Picek",
+    href: "https://openaccess.thecvf.com/content/WACV2024/papers/Adam_SeaTurtleID2022_A_Long-Span_Dataset_for_Reliable_Sea_Turtle_Re-Identification_WACV_2024_paper.pdf",
+    topics: ["Wildlife Re-Identification", "Datasets", "Sea Turtles"]
+  },
+  {
+    year: 2024,
+    title: "MALPOLON: A Framework for Deep Species Distribution Modeling",
+    venue: "MVEO Workshop at BMVC, 2024",
+    authors: "Theo Larcher, Lukas Picek, Benjamin Deneu, Titouan Lorieul, Maximilien Servajean, Alexis Joly",
+    href: "https://bmva-archive.org.uk/bmvc/2024/workshops/MVEO/paper2.pdf",
+    topics: ["Species Distribution Modeling", "Deep Learning", "Biodiversity AI"]
+  },
+  {
+    year: 2024,
     title: "Improving Handwritten Cyrillic OCR by Font-Based Synthetic Text Generator",
     venue: "International Conference on the Dynamics of Information Systems, 2024",
     authors: "Ivan Gruber, Lukas Picek, Miroslav Hlavac, Petr Neduchal, Marek Hruz",
@@ -197,7 +213,7 @@ window.publicationsData = [
     venue: "ECIR 2024",
     authors: "Alexis Joly, Lukas Picek, Stefan Kahl, Herve Goeau, Vincent Espitalier, Christophe Botella, Benjamin Deneu, Diego Marcos, Joaquim Estopinan, Cesar Leblanc, and others",
     href: "https://doi.org/10.1007/978-3-031-56072-9_3",
-    topics: ["LifeCLEF", "Benchmarks", "Species Distribution Modeling"]
+    topics: ["LifeCLEF", "Benchmarks"]
   },
   {
     year: 2024,
@@ -205,15 +221,7 @@ window.publicationsData = [
     venue: "CLEF 2024",
     authors: "Alexis Joly, Lukas Picek, Stefan Kahl, Herve Goeau, Vincent Espitalier, Christophe Botella, Benjamin Deneu, Diego Marcos, Joaquim Estopinan, Cesar Leblanc, and others",
     href: "https://doi.org/10.1007/978-3-031-71908-0_9",
-    topics: ["LifeCLEF", "Benchmarks", "Species Distribution Modeling"]
-  },
-  {
-    year: 2024,
-    title: "SeaTurtleID2022: A Long-Span Dataset for Reliable Sea Turtle Re-Identification",
-    venue: "IEEE/CVF WACV, 2024",
-    authors: "Lukas Adam, Vojtech Cermak, Kostas Papafitsoros, Lukas Picek",
-    href: "https://openaccess.thecvf.com/content/WACV2024/papers/Adam_SeaTurtleID2022_A_Long-Span_Dataset_for_Reliable_Sea_Turtle_Re-Identification_WACV_2024_paper.pdf",
-    topics: ["Wildlife Re-Identification", "Datasets", "Sea Turtles"]
+    topics: ["LifeCLEF", "Benchmarks"]
   },
   {
     year: 2024,
@@ -240,12 +248,20 @@ window.publicationsData = [
     topics: ["GeoLifeCLEF", "Species Distribution Modeling", "Benchmarks", "LifeCLEF"]
   },
   {
-    year: 2024,
-    title: "MALPOLON: A Framework for Deep Species Distribution Modeling",
-    venue: "MVEO Workshop at BMVC, 2024",
-    authors: "Theo Larcher, Lukas Picek, Benjamin Deneu, Titouan Lorieul, Maximilien Servajean, Alexis Joly",
-    href: "https://bmva-archive.org.uk/bmvc/2024/workshops/MVEO/paper2.pdf",
-    topics: ["Species Distribution Modeling", "Deep Learning", "Biodiversity AI"]
+    year: 2023,
+    title: "Predicting Risk of Multiple Sclerosis Worsening",
+    venue: "CLEF 2023 Working Notes",
+    authors: "Marek Hanzl, Lukas Picek",
+    href: "https://ceur-ws.org/Vol-3497/paper-101.pdf",
+    topics: ["Applied AI", "Health", "Prediction"]
+  },
+  {
+    year: 2023,
+    title: "VinVL+ L: Enriching Visual Representation with Location Context in VQA",
+    venue: "CVWW 2023 Working Notes",
+    authors: "Jiri Vyskovcil, Lukas Picek",
+    href: "https://ceur-ws.org/Vol-3349/paper4.pdf",
+    topics: ["Computer Vision", "VQA", "Applied AI"]
   },
   {
     year: 2023,
@@ -278,22 +294,6 @@ window.publicationsData = [
     authors: "Lukas Picek, Milan Sulc, Rail Chamidullin, Jiri Matas",
     href: "https://ceur-ws.org/Vol-3497/paper-165.pdf",
     topics: ["Fungi", "Benchmarks", "Open Set Recognition", "LifeCLEF"]
-  },
-  {
-    year: 2023,
-    title: "Predicting Risk of Multiple Sclerosis Worsening",
-    venue: "CLEF 2023 Working Notes",
-    authors: "Marek Hanzl, Lukas Picek",
-    href: "https://ceur-ws.org/Vol-3497/paper-101.pdf",
-    topics: ["Applied AI", "Health", "Prediction"]
-  },
-  {
-    year: 2023,
-    title: "VinVL+ L: Enriching Visual Representation with Location Context in VQA",
-    venue: "CVWW 2023 Working Notes",
-    authors: "Jiri Vyskovcil, Lukas Picek",
-    href: "https://ceur-ws.org/Vol-3349/paper4.pdf",
-    topics: ["Computer Vision", "VQA", "Applied AI"]
   },
   {
     year: 2022,
@@ -352,7 +352,7 @@ window.publicationsData = [
     venue: "ECIR 2022",
     authors: "Alexis Joly, Herve Goeau, Stefan Kahl, Lukas Picek, Titouan Lorieul, Elijah Cole, Benjamin Deneu, Maximilien Servajean, Andrew Durso, Isabelle Bolon, and others",
     href: "https://doi.org/10.1007/978-3-030-99739-7_49",
-    topics: ["LifeCLEF", "Benchmarks", "Species Distribution Modeling"]
+    topics: ["LifeCLEF", "Benchmarks"]
   },
   {
     year: 2022,
@@ -368,7 +368,7 @@ window.publicationsData = [
     venue: "CLEF 2022",
     authors: "Alexis Joly, Herve Goeau, Stefan Kahl, Lukas Picek, Titouan Lorieul, Elijah Cole, Benjamin Deneu, and others",
     href: "https://doi.org/10.1007/978-3-031-13643-6_19",
-    topics: ["LifeCLEF", "Benchmarks", "Species Distribution Modeling"]
+    topics: ["LifeCLEF", "Benchmarks"]
   },
   {
     year: 2021,
@@ -400,7 +400,7 @@ window.publicationsData = [
     venue: "CLEF 2021",
     authors: "Alexis Joly, Herve Goeau, Stefan Kahl, Lukas Picek, Titouan Lorieul, Elijah Cole, and others",
     href: "https://doi.org/10.1007/978-3-030-85251-1_24",
-    topics: ["LifeCLEF", "Benchmarks", "Species Distribution Modeling"]
+    topics: ["LifeCLEF", "Benchmarks"]
   },
   {
     year: 2021,
@@ -424,7 +424,15 @@ window.publicationsData = [
     venue: "CLEF 2020 Working Notes",
     authors: "Lukas Picek, Antonin Riha, Ales Zita",
     href: "https://ceur-ws.org/Vol-2696/paper_83.pdf",
-    topics: ["Computer Vision", "Segmentation", "Applied AI"]
+    topics: ["Species Recognition", "Segmentation", "Applied AI"]
+  },
+  {
+    year: 2020,
+    title: "Sketch2Code: Automatic hand-drawn UI elements detection with Faster R-CNN",
+    venue: "CLEF 2020 Working Notes",
+    authors: "Ales Zita, Lukas Picek, Antonin Riha",
+    href: "https://ceur-ws.org/Vol-2696/paper_82.pdf",
+    topics: ["Computer Vision", "UI Detection", "Applied AI"]
   },
   {
     year: 2020,
@@ -440,7 +448,7 @@ window.publicationsData = [
     venue: "CLEF 2020",
     authors: "Alexis Joly, Herve Goeau, Stefan Kahl, Benjamin Deneu, Maximillien Servajean, Elijah Cole, Lukas Picek, Rafael Castaneda, Isabelle Bolon, Andrew Durso, and others",
     href: "https://doi.org/10.1007/978-3-030-58219-7_23",
-    topics: ["LifeCLEF", "Benchmarks", "Species Distribution Modeling"]
+    topics: ["LifeCLEF", "Benchmarks"]
   },
   {
     year: 2020,
@@ -449,14 +457,6 @@ window.publicationsData = [
     authors: "Lukas Picek, Isabelle Bolon, Andrew M. Durso, Rafael Ruiz de Castaneda",
     href: "https://ceur-ws.org/Vol-2696/paper_258.pdf",
     topics: ["Snakes", "Benchmarks", "Species Recognition", "LifeCLEF"]
-  },
-  {
-    year: 2020,
-    title: "Sketch2Code: Automatic hand-drawn UI elements detection with Faster R-CNN",
-    venue: "CLEF 2020 Working Notes",
-    authors: "Ales Zita, Lukas Picek, Antonin Riha",
-    href: "https://ceur-ws.org/Vol-2696/paper_82.pdf",
-    topics: ["Computer Vision", "UI Detection", "Applied AI"]
   },
   {
     year: 2019,
