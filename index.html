@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Profile</title>
+    <meta
+      name="description"
+      content="A research profile site for showcasing publications, projects, and academic work."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./data/profile-base.js"></script>
+    <script defer src="./data/publications.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/home.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="sidebar__inner">
+          <div class="sidebar__top">
+            <a class="brand" href="#top">
+              <span class="brand__eyebrow">Research Profile</span>
+              <span id="nav-name" class="brand__name">Your Name</span>
+            </a>
+
+            <div class="sidebar__identity">
+              <p id="nav-role" class="sidebar__role">Assistant Professor of Something Interesting</p>
+            </div>
+          </div>
+
+          <div class="sidebar__middle">
+            <p class="sidebar__label">Navigate</p>
+            <nav class="site-nav" aria-label="Section navigation">
+              <a href="#bio">Bio</a>
+              <a href="#interests">Interests</a>
+              <a href="#publications">Publications</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+
+          <div class="sidebar__meta">
+            <p>Cambridge, MA, USA</p>
+          </div>
+        </div>
+      </aside>
+
+      <main id="top" class="content">
+        <section class="hero">
+          <div class="hero__copy">
+            <p id="hero-kicker" class="hero__kicker">Computing x Society x Systems</p>
+            <h1 id="hero-name">Your Name</h1>
+            <p id="hero-summary" class="hero__summary">
+              I study how machine learning systems can support rigorous, human-centered
+              research in high-stakes domains.
+            </p>
+
+            <div class="hero__bio">
+              <div class="hero__bio-header">
+                <span class="hero__bio-label">Bio</span>
+              </div>
+              <p id="bio-paragraph-1" class="hero__bio-block"></p>
+            </div>
+          </div>
+
+          <div class="hero__card">
+            <div class="portrait-frame">
+              <img
+                id="profile-image"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
+                alt="Portrait placeholder for researcher profile"
+              />
+            </div>
+
+            <dl class="quick-facts">
+              <div>
+                <dt>Focus</dt>
+                <dd id="fact-focus">Trustworthy AI, HCI, computational social science</dd>
+              </div>
+              <div>
+                <dt>Based in</dt>
+                <dd id="fact-location">New York, NY</dd>
+              </div>
+              <div>
+                <dt>Open to</dt>
+                <dd id="fact-collab">Collaborations, advising, invited talks</dd>
+              </div>
+            </dl>
+
+            <div id="hero-links" class="link-row hero__links-under-photo" aria-label="External profile links"></div>
+          </div>
+        </section>
+
+        <section id="interests" class="panel">
+          <div class="section-heading">
+            <span>What drives the work</span>
+            <h2>Research interests</h2>
+          </div>
+          <div id="interests-list" class="interest-grid"></div>
+        </section>
+
+        <section id="publications" class="panel">
+          <div class="section-heading section-heading--with-action">
+            <div>
+              <span>Outputs</span>
+              <h2>Selected publications</h2>
+            </div>
+            <a class="section-link" href="./publications.html">View all publications</a>
+          </div>
+          <div id="publications-list" class="stack-list"></div>
+          <div class="panel__actions">
+            <a class="button-link" href="./publications.html">Browse all publications</a>
+          </div>
+        </section>
+
+        <section id="contact" class="panel panel--contact">
+          <div class="section-heading">
+            <span>Reach out</span>
+            <h2>Contact</h2>
+          </div>
+          <div class="contact-card">
+            <p id="contact-copy">
+              I’m always happy to connect about research collaborations, speaking
+              invitations, and opportunities for students.
+            </p>
+            <a id="contact-email" class="button-link" href="mailto:your.email@example.com">
+              your.email@example.com
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

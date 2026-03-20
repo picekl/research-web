@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All News | Lukas Picek</title>
+    <meta
+      name="description"
+      content="News and updates from Lukas Picek's research profile."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./data/profile-base.js"></script>
+    <script defer src="./data/publications.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/archive-page.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell page-shell--subpage">
+      <aside class="sidebar">
+        <div class="sidebar__inner">
+          <div class="sidebar__top">
+            <a class="brand" href="./index.html">
+              <span class="brand__eyebrow">Research Profile</span>
+              <span class="brand__name">Lukas Picek</span>
+            </a>
+
+            <div class="sidebar__identity">
+              <p class="sidebar__role">Research archive</p>
+              <p class="sidebar__institution">Projects, publications, and updates</p>
+            </div>
+          </div>
+
+          <div class="sidebar__middle">
+            <p class="sidebar__label">Navigate</p>
+            <nav class="site-nav" aria-label="Archive navigation">
+              <a href="./index.html">Home</a>
+              <a href="./index.html#interests">Interests</a>
+              <a href="./projects.html">All Projects</a>
+              <a href="./publications.html">All Publications</a>
+              <a href="./news.html" aria-current="page">All News</a>
+              <a href="./index.html#contact">Contact</a>
+            </nav>
+          </div>
+
+          <div class="sidebar__meta">
+            <p>Cambridge, MA, USA</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="subpage-shell">
+        <header class="subpage-hero">
+          <a class="subpage-hero__back" href="./index.html">Back to home</a>
+          <p class="hero__kicker">Research Archive</p>
+          <h1>All News</h1>
+          <p class="subpage-hero__summary">
+            Recent milestones, publications, and updates across ongoing research
+            work and collaborations.
+          </p>
+        </header>
+
+        <main class="panel">
+          <div id="archive-list" class="timeline"></div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
