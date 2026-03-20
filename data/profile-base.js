@@ -111,6 +111,43 @@ window.profileBase = {
       ]
     }
   ],
+  tools: [
+    {
+      title: "Wildlife Datasets",
+      question:
+        "Open-source datasets, tooling, and documentation for animal re-identification workflows, with practical support for wildlife monitoring research.",
+      links: [
+        { type: "website", href: "https://wildlifedatasets.github.io/wildlife-datasets/" },
+        { type: "github", href: "https://github.com/WildlifeDatasets/wildlife-datasets" }
+      ]
+    },
+    {
+      title: "GeoPl@ntNet",
+      question:
+        "An interactive biodiversity mapping platform for exploring high-resolution plant species predictions, biodiversity indicators, and report generation at multiple spatial scales.",
+      links: [
+        { type: "website", href: "https://geo.plantnet.org/" }
+      ]
+    },
+    {
+      title: "Malpolon",
+      question:
+        "A deep species distribution modeling framework for training and sharing SDM models from remote sensing, climate, land-use, and other environmental covariates.",
+      links: [
+        { type: "website", href: "https://plantnet.github.io/malpolon/" },
+        { type: "github", href: "https://github.com/plantnet/malpolon" }
+      ]
+    },
+    {
+      title: "CzechFungi + Danish Fungal Atlas",
+      question:
+        "Public mobile apps for fungi identification, built to make species recognition accessible in practice through CzechFungi and the Atlas of Danish Fungi.",
+      links: [
+        { type: "apple", href: "https://apps.apple.com/cz/app/checkfungi/id1659722955" },
+        { type: "apple", href: "https://apps.apple.com/us/app/atlas-of-danish-fungi/id1467728588" }
+      ]
+    }
+  ],
   news: [
     {
       date: "February 2026",

@@ -18,6 +18,12 @@ window.siteUtils = (() => {
     website: `
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm6.92 9h-3.01a15.59 15.59 0 0 0-1.3-5.02A8.03 8.03 0 0 1 18.92 11ZM12 4.04c.83 1.1 1.86 3.42 2.08 6.96H9.92C10.14 7.46 11.17 5.14 12 4.04ZM9.39 5.98A15.59 15.59 0 0 0 8.09 11H5.08a8.03 8.03 0 0 1 4.31-5.02ZM4.26 13h3.83a15.61 15.61 0 0 0 1.3 5.02A8.04 8.04 0 0 1 4.26 13Zm5.66 0h4.16c-.22 3.54-1.25 5.86-2.08 6.96-.83-1.1-1.86-3.42-2.08-6.96Zm4.69 5.02A15.61 15.61 0 0 0 15.91 13h3.83a8.04 8.04 0 0 1-5.13 5.02Z"/></svg>
     `,
+    apple: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.67 12.37c.01 2.64 2.32 3.52 2.35 3.53-.02.06-.37 1.27-1.22 2.51-.73 1.07-1.49 2.14-2.68 2.16-1.17.02-1.55-.69-2.89-.69-1.34 0-1.76.67-2.86.71-1.14.04-2.01-1.14-2.75-2.2-1.5-2.17-2.64-6.13-1.11-8.79.76-1.32 2.12-2.16 3.59-2.18 1.12-.02 2.18.75 2.89.75.71 0 2.03-.92 3.42-.79.58.02 2.2.23 3.24 1.74-.08.05-1.94 1.13-1.93 3.25ZM13.95 5.25c.61-.74 1.02-1.77.91-2.8-.88.04-1.94.59-2.57 1.33-.57.66-1.06 1.72-.93 2.73.98.08 1.98-.5 2.59-1.26Z"/></svg>
+    `,
+    android: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 9.48 19.03 7a.5.5 0 1 0-.87-.5l-1.46 2.52A8.12 8.12 0 0 0 12 7.5c-1.7 0-3.28.52-4.59 1.4L5.95 6.5a.5.5 0 0 0-.87.5l1.43 2.48A6.77 6.77 0 0 0 3 15h18a6.77 6.77 0 0 0-3.4-5.52ZM8.5 12.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm7 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM7 16.5v3a1.5 1.5 0 0 0 3 0v-3H7Zm7 0v3a1.5 1.5 0 0 0 3 0v-3h-3Zm-6 0h8v4a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-4Z"/></svg>
+    `,
     reference: `
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 3v1.56c1.94.26 3.34 1.45 3.68 3.23h-2.34c-.23-.88-.97-1.38-2.06-1.38-1.18 0-1.95.53-1.95 1.34 0 .75.53 1.15 2.3 1.54 2.8.62 4.39 1.53 4.39 3.98 0 2.09-1.56 3.52-4.02 3.82V21h-2.02v-1.61c-2.19-.32-3.74-1.63-4-3.72h2.37c.22 1 1.05 1.57 2.31 1.57 1.3 0 2.13-.56 2.13-1.43 0-.79-.49-1.2-2.18-1.59-3.06-.71-4.48-1.75-4.48-4.01 0-1.95 1.47-3.4 3.87-3.69V3h2.02Z"/></svg>
     `,
@@ -61,22 +67,28 @@ window.siteUtils = (() => {
     return text.replaceAll("Lukas Picek", "<strong>Lukas Picek</strong>");
   }
 
-  function createProjectCard(project) {
+  function createLinkedCard(item, className) {
     const article = document.createElement("article");
-    article.className = "project-card";
-    const links = project.links || (project.href ? [{ type: "website", href: project.href }] : []);
+    article.className = className;
+    const links = item.links || (item.href ? [{ type: "website", href: item.href }] : []);
     const linksMarkup =
       links.length > 0
-        ? `<div class="project-card__links">
+        ? `<div class="${className}__links">
             ${links
               .map(
                 (link) => `
                   <a
-                    class="project-card__icon-link"
+                    class="${className}__icon-link"
                     href="${link.href}"
                     aria-label="${
                       link.type === "reference"
                         ? "Funding reference"
+                        : link.type === "apple"
+                          ? "Apple App Store"
+                          : link.type === "android"
+                            ? "Google Play"
+                        : link.type === "kaggle"
+                          ? "Kaggle dataset"
                         : link.type === "github"
                           ? "GitHub repository"
                           : "Project website"
@@ -84,6 +96,12 @@ window.siteUtils = (() => {
                     title="${
                       link.type === "reference"
                         ? "Funding reference"
+                        : link.type === "apple"
+                          ? "Apple App Store"
+                          : link.type === "android"
+                            ? "Google Play"
+                        : link.type === "kaggle"
+                          ? "Kaggle dataset"
                         : link.type === "github"
                           ? "GitHub repository"
                           : "Project website"
@@ -98,14 +116,22 @@ window.siteUtils = (() => {
         : "";
 
     article.innerHTML = `
-      <div class="project-card__header">
-        <h3>${project.title}</h3>
+      <div class="${className}__header">
+        <h3>${item.title}</h3>
         ${linksMarkup}
       </div>
-      <p>${project.question}</p>
+      <p>${item.question}</p>
     `;
 
     return article;
+  }
+
+  function createProjectCard(project) {
+    return createLinkedCard(project, "project-card");
+  }
+
+  function createToolCard(tool) {
+    return createLinkedCard(tool, "tool-card");
   }
 
   function createPublicationCard(publication, options = {}) {
@@ -171,6 +197,7 @@ window.siteUtils = (() => {
 
   return {
     createProjectCard,
+    createToolCard,
     createPublicationCard,
     highlightName,
     linkIcons,
