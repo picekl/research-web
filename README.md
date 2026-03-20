@@ -21,6 +21,19 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
+## Deploy to GitHub Pages
+
+This repo is set up to deploy automatically from `main` using GitHub Pages and GitHub Actions.
+
+1. Push the repository to GitHub.
+2. In GitHub, open `Settings` -> `Pages`.
+3. Set `Source` to `GitHub Actions`.
+4. Push to `main` again if needed, or run the `Deploy GitHub Pages` workflow manually.
+
+After the workflow finishes, the site should be available at:
+
+- `https://picekl.github.io/research-web/`
+
 ## Files
 
 - [`index.html`](/Users/lukaspicek/Documents/Projects/research-web/index.html): page structure
