@@ -11,7 +11,7 @@ window.profileBase = {
   image: "./IMG_6920.jpg",
   email: "lukaspicek@gmail.com",
   bio: [
-    "I work at the intersection of computer vision, applied AI, and biodiversity science, with the goal of developing AI methods that are not only accurate, but genuinely useful for ecology and scientific discovery in real-world settings. My research focuses on species recognition, individual animal identification, and species distribution modeling, alongside a broader interest in the datasets, open benchmarks, and evaluation practices that determine whether these systems hold up beyond the lab. Much of this work is shaped by close collaboration with biologists, herpetologists, mycologists, and other domain experts.<br><br>I received my PhD in Applied AI from the <a href=\"https://www.fav.zcu.cz/en/Faculty/index.html\">University of West Bohemia</a> in Pilsen, Czechia, then moved to <a href=\"https://www.inria.fr/en\">Inria</a>, France, with the <a href=\"https://plantnet.org/team/\">Pl@ntNet team</a>.<br><br><b>Currently I am a Fulbright Visiting Scholar at <a href=\"https://www.mit.edu/\">MIT</a> in the <a href=\"https://beerylab.csail.mit.edu/people/\">Beery Lab</a>.</b>"
+    "I work at the intersection of computer vision, applied AI, and biodiversity science, with the goal of developing AI methods that are not only accurate, but genuinely useful for ecology and scientific discovery in real-world settings. My research focuses on species recognition, individual animal identification, and species distribution modeling, alongside a broader interest in the datasets, open benchmarks, and evaluation practices that determine whether these systems hold up beyond the lab. Much of this work is shaped by close collaboration with biologists, herpetologists, mycologists, and other domain experts.<br><br>I received my PhD in Applied AI from the <a href=\"https://www.fav.zcu.cz/en/Faculty/index.html\">University of West Bohemia</a> in Pilsen, Czechia, then moved to <a href=\"https://www.inria.fr/en\">Inria</a>, France, to work with the <a href=\"https://plantnet.org/team/\">Pl@ntNet team</a>.<br><br><b>Currently, I am a Fulbright Visiting Scholar at <a href=\"https://www.mit.edu/\">MIT</a> in the <a href=\"https://beerylab.csail.mit.edu/people/\">Beery Lab</a>.</b>"
   ],
   links: [
     { label: "GitHub", href: "https://github.com/picekl" },
@@ -43,39 +43,72 @@ window.profileBase = {
   ],
   projects: [
     {
-      title: "Danish Svampe Atlas",
+      title: "FunDive",
       question:
-        "Lead investigator on automatic fungi recognition systems, including API services, lightweight model development, and dataset work for large-scale fungal biodiversity monitoring.",
-      meta: "Fungi recognition and biodiversity infrastructure",
-      href: "https://sites.google.com/view/picekl"
+        "Monitoring and mapping fungal diversity for nature conservation through machine-learning tools built with European mycologists and biodiversity partners.",
+      meta: "Fungi recognition, biodiversity data, and conservation",
+      links: [
+        { type: "website", href: "https://fun-dive.eu" },
+        { type: "reference", href: "https://starfos.tacr.cz/en/projekty/SS73020004" }
+      ]
     },
     {
-      title: "Snake Species Recognition",
+      title: "CarnivoreID",
       question:
-        "Developing recognition tools and benchmark data for fast, reliable snake identification in collaboration with herpetologists and global health partners.",
-      meta: "Computer vision for global health and herpetology",
-      href: "https://sites.google.com/view/picekl"
+        "Individual identification of lynx, leopards, sea turtles, and other species using segmentation, pose estimation, and re-identification methods for wildlife monitoring.",
+      meta: "Animal re-identification and conservation AI",
+      links: [
+        { type: "website", href: "https://caid.kky.zcu.cz/caidapp/home/" },
+        { type: "reference", href: "https://starfos.tacr.cz/en/project/SS05010008" },
+        { type: "github", href: "https://github.com/WildlifeDatasets/wildlife-tools" }
+      ]
     },
     {
-      title: "Carnivore ID and Wildlife ReID",
+      title: "MAMBO",
       question:
-        "Research on identifying individual animals, especially lynxes and other wildlife species, through datasets, benchmark design, and re-identification methods.",
-      meta: "Wildlife re-identification and conservation AI",
-      href: "https://github.com/WildlifeDatasets/wildlife-tools"
+        "Developing novel tools for monitoring biodiversity, species conservation, and ecological requirements in settings where knowledge gaps still limit practical decision-making.",
+      meta: "Biodiversity monitoring and ecological intelligence",
+      links: [
+        { type: "website", href: "https://www.mambo-project.eu/" },
+        { type: "reference", href: "https://cordis.europa.eu/project/id/101060639" }
+      ]
     },
     {
-      title: "Varroa Destructor Detection",
+      title: "GUARDEN",
       question:
-        "Building AI-based detection pipelines for monitoring Varroa destructor infestation in beehives in collaboration with academic and industry partners.",
-      meta: "Applied computer vision for environmental monitoring",
-      href: "https://sites.google.com/view/picekl"
+        "Building deep learning and earth observation tools that connect geo-referenced biodiversity and ecosystem indicators to policy and management decisions.",
+      meta: "Species distribution modeling and ecosystem monitoring",
+      links: [
+        { type: "website", href: "https://guarden.org/" },
+        { type: "reference", href: "https://cordis.europa.eu/project/id/101060693" }
+      ]
+    },
+    {
+      title: "BeeHive",
+      question:
+        "Studying how climate change affects honey bee colony health through biological analysis and AI, in collaboration with bee researchers and environmental scientists.",
+      meta: "Applied AI for environmental and biological monitoring",
+      links: [
+        { type: "reference", href: "https://starfos.tacr.cz/en/projekty/LUAUS23128" }
+      ]
+    },
+    {
+      title: "SmartDepo",
+      question:
+        "Evaluating AI confidence for autonomous tram control, with a focus on safe localization and obstacle detection in real-world tram depot environments.",
+      meta: "Reliable AI for autonomous mobility",
+      links: [
+        { type: "reference", href: "https://starfos.tacr.cz/en/projekty/CL01000275" }
+      ]
     },
     {
       title: "DiDYMOS",
       question:
-        "Automatic data extraction for a digital street model tailored to autonomous mobility in Pilsen, developed with transportation and mapping partners.",
-      meta: "Urban perception and applied mobility systems",
-      href: "https://sites.google.com/view/picekl"
+        "Automated scene object extraction for autonomous trams using video and lidar, with real-time detection and panoptic segmentation for mobility systems in Pilsen.",
+      meta: "Urban perception and scene understanding",
+      links: [
+        { type: "reference", href: "https://starfos.tacr.cz/en/project/CK03000179" }
+      ]
     }
   ],
   news: [

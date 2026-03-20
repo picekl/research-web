@@ -42,6 +42,18 @@ window.publicationsData = [
     venue: "Scientific Data, 2026",
     authors: "Lukas Picek, Jakub Straka, Miroslav Jirik, et al.",
     href: "https://doi.org/10.1038/s41597-026-06853-9",
+    resources: [
+      {
+        type: "kaggle",
+        label: "CzechLynx on Kaggle",
+        href: "https://www.kaggle.com/datasets/picekl/czechlynx"
+      },
+      {
+        type: "dataset",
+        label: "CzechLynx on Zenodo",
+        href: "https://zenodo.org/records/17592004"
+      }
+    ],
     publicationType: "Journal",
     topics: ["Wildlife Re-Identification", "Pose Estimation", "Datasets"]
   },
@@ -51,6 +63,18 @@ window.publicationsData = [
     venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2025",
     authors: "Lukas Picek, Klara Janouskova, Vojtech Cermak, Jiri Matas",
     href: "https://openaccess.thecvf.com/content/CVPR2025W/FGVC/html/Picek_FungiTastic_A_Multi-Modal_Dataset_and_Benchmark_for_Image_Categorization_CVPRW_2025_paper.html",
+    resources: [
+      {
+        type: "kaggle",
+        label: "FungiTastic on Kaggle",
+        href: "https://www.kaggle.com/datasets/picekl/fungitastic/data"
+      },
+      {
+        type: "github",
+        label: "FungiTastic GitHub",
+        href: "https://github.com/BohemianVRA/FungiTastic/"
+      }
+    ],
     topics: ["Fine-Grained Recognition", "Fungi", "Benchmarks"]
   },
   {
@@ -139,6 +163,18 @@ window.publicationsData = [
     venue: "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2024",
     authors: "Vojtech Cermak, Lukas Picek, Lukas Adam, Kostas Papafitsoros",
     href: "https://openaccess.thecvf.com/content/WACV2024/html/Cermak_WildlifeDatasets_An_Open-Source_Toolkit_for_Animal_Re-Identification_WACV_2024_paper.html",
+    resources: [
+      {
+        type: "website",
+        label: "Wildlife Datasets documentation",
+        href: "https://wildlifedatasets.github.io/wildlife-datasets/"
+      },
+      {
+        type: "github",
+        label: "Wildlife Tools GitHub",
+        href: "https://github.com/WildlifeDatasets/wildlife-tools"
+      }
+    ],
     note: "Best Paper Award",
     topics: ["Wildlife Re-Identification", "Open Source", "Datasets"]
   },
@@ -148,6 +184,23 @@ window.publicationsData = [
     venue: "Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track, 2024",
     authors: "Lukas Picek, Christophe Botella, Maximilien Servajean, Cesar Leblanc, Remi Palard, Theo Larcher, Benjamin Deneu, Diego Marcos, Pierre Bonnet, Alexis Joly",
     href: "https://papers.nips.cc/paper_files/paper/2024/hash/e4e7de47202bda8133dd3e8b46205cf2-Abstract-Datasets_and_Benchmarks_Track.html",
+    resources: [
+      {
+        type: "kaggle",
+        label: "GeoPlant on Kaggle",
+        href: "https://www.kaggle.com/datasets/picekl/geoplant/data"
+      },
+      {
+        type: "website",
+        label: "GeoPlant website",
+        href: "https://plantnet.github.io/GeoPlant/"
+      },
+      {
+        type: "github",
+        label: "GeoPlant GitHub",
+        href: "https://github.com/plantnet/GeoPlant"
+      }
+    ],
     note: "Spotlight Paper",
     topics: ["Species Distribution Modeling", "Plants", "Datasets"]
   },
@@ -301,6 +354,13 @@ window.publicationsData = [
     venue: "Sensors, 2022",
     authors: "Lukas Picek, Milan Sulc, Jiri Matas, Jacob Heilmann-Clausen, Thomas S. Jeppesen, Emil Lind",
     href: "https://doi.org/10.3390/s22020633",
+    resources: [
+      {
+        type: "github",
+        label: "DanishFungiDataset GitHub",
+        href: "https://github.com/BohemianVRA/DanishFungiDataset"
+      }
+    ],
     publicationType: "Journal",
     topics: ["Fungi", "Species Recognition", "Applied AI"]
   },

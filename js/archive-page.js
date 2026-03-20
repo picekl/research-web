@@ -3,23 +3,11 @@ const profile = {
   publications: window.publicationsData
 };
 
-const { createPublicationCard } = window.siteUtils;
+const { createProjectCard, createPublicationCard } = window.siteUtils;
 
 let activePublicationTopics = new Set();
 let activePublicationYear = "all";
 let activePublicationType = "all";
-
-function createProjectCard(project) {
-  const article = document.createElement("article");
-  article.className = "project-card";
-  article.innerHTML = `
-    <div class="project-card__meta">${project.meta}</div>
-    <h3>${project.title}</h3>
-    <p>${project.question}</p>
-    <a class="project-card__link" href="${project.href}">Learn more</a>
-  `;
-  return article;
-}
 
 function createNewsItem(item) {
   const article = document.createElement("article");

@@ -14,6 +14,33 @@ window.siteUtils = (() => {
     `
   };
 
+  const projectLinkIcons = {
+    website: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm6.92 9h-3.01a15.59 15.59 0 0 0-1.3-5.02A8.03 8.03 0 0 1 18.92 11ZM12 4.04c.83 1.1 1.86 3.42 2.08 6.96H9.92C10.14 7.46 11.17 5.14 12 4.04ZM9.39 5.98A15.59 15.59 0 0 0 8.09 11H5.08a8.03 8.03 0 0 1 4.31-5.02ZM4.26 13h3.83a15.61 15.61 0 0 0 1.3 5.02A8.04 8.04 0 0 1 4.26 13Zm5.66 0h4.16c-.22 3.54-1.25 5.86-2.08 6.96-.83-1.1-1.86-3.42-2.08-6.96Zm4.69 5.02A15.61 15.61 0 0 0 15.91 13h3.83a8.04 8.04 0 0 1-5.13 5.02Z"/></svg>
+    `,
+    reference: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 3v1.56c1.94.26 3.34 1.45 3.68 3.23h-2.34c-.23-.88-.97-1.38-2.06-1.38-1.18 0-1.95.53-1.95 1.34 0 .75.53 1.15 2.3 1.54 2.8.62 4.39 1.53 4.39 3.98 0 2.09-1.56 3.52-4.02 3.82V21h-2.02v-1.61c-2.19-.32-3.74-1.63-4-3.72h2.37c.22 1 1.05 1.57 2.31 1.57 1.3 0 2.13-.56 2.13-1.43 0-.79-.49-1.2-2.18-1.59-3.06-.71-4.48-1.75-4.48-4.01 0-1.95 1.47-3.4 3.87-3.69V3h2.02Z"/></svg>
+    `,
+    github: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.866-.014-1.7-2.782.605-3.369-1.344-3.369-1.344-.455-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.893 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .269.18.58.688.481A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"/></svg>
+    `
+  };
+
+  const publicationResourceIcons = {
+    website: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2Zm6.92 9h-3.01a15.59 15.59 0 0 0-1.3-5.02A8.03 8.03 0 0 1 18.92 11ZM12 4.04c.83 1.1 1.86 3.42 2.08 6.96H9.92C10.14 7.46 11.17 5.14 12 4.04ZM9.39 5.98A15.59 15.59 0 0 0 8.09 11H5.08a8.03 8.03 0 0 1 4.31-5.02ZM4.26 13h3.83a15.61 15.61 0 0 0 1.3 5.02A8.04 8.04 0 0 1 4.26 13Zm5.66 0h4.16c-.22 3.54-1.25 5.86-2.08 6.96-.83-1.1-1.86-3.42-2.08-6.96Zm4.69 5.02A15.61 15.61 0 0 0 15.91 13h3.83a8.04 8.04 0 0 1-5.13 5.02Z"/></svg>
+    `,
+    github: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.866-.014-1.7-2.782.605-3.369-1.344-3.369-1.344-.455-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.893 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .269.18.58.688.481A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"/></svg>
+    `,
+    kaggle: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.37 4.5v8.48l4.08-4.15h3.88l-4.74 4.71L18 19.5h-3.87l-4.76-5.33V19.5H6.5v-15h2.87Z"/></svg>
+    `,
+    dataset: `
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-4.97 0-9 1.57-9 3.5S7.03 10 12 10s9-1.57 9-3.5S16.97 3 12 3Zm-9 6v4.5C3 15.43 7.03 17 12 17s9-1.57 9-3.5V9c-1.91 1.47-5.45 2.25-9 2.25S4.91 10.47 3 9Zm0 7v1.5C3 19.43 7.03 21 12 21s9-1.57 9-3.5V16c-1.91 1.47-5.45 2.25-9 2.25S4.91 17.47 3 16Z"/></svg>
+    `
+  };
+
   function setText(id, value) {
     const node = document.getElementById(id);
     if (node) node.textContent = value;
@@ -34,15 +61,94 @@ window.siteUtils = (() => {
     return text.replaceAll("Lukas Picek", "<strong>Lukas Picek</strong>");
   }
 
-  function createPublicationCard(publication) {
+  function createProjectCard(project) {
+    const article = document.createElement("article");
+    article.className = "project-card";
+    const links = project.links || (project.href ? [{ type: "website", href: project.href }] : []);
+    const linksMarkup =
+      links.length > 0
+        ? `<div class="project-card__links">
+            ${links
+              .map(
+                (link) => `
+                  <a
+                    class="project-card__icon-link"
+                    href="${link.href}"
+                    aria-label="${
+                      link.type === "reference"
+                        ? "Funding reference"
+                        : link.type === "github"
+                          ? "GitHub repository"
+                          : "Project website"
+                    }"
+                    title="${
+                      link.type === "reference"
+                        ? "Funding reference"
+                        : link.type === "github"
+                          ? "GitHub repository"
+                          : "Project website"
+                    }"
+                  >
+                    ${projectLinkIcons[link.type] || projectLinkIcons.website}
+                  </a>
+                `
+              )
+              .join("")}
+          </div>`
+        : "";
+
+    article.innerHTML = `
+      <div class="project-card__header">
+        <h3>${project.title}</h3>
+        ${linksMarkup}
+      </div>
+      <p>${project.question}</p>
+    `;
+
+    return article;
+  }
+
+  function createPublicationCard(publication, options = {}) {
     const article = document.createElement("article");
     article.className = "publication-item";
+    const companionLinks =
+      options.showResources && Array.isArray(publication.resources) ? publication.resources : [];
+    const linksMarkup =
+      publication.href || companionLinks.length > 0
+        ? `<div class="publication-item__links">
+            ${
+              publication.href
+                ? `<a class="project-card__link" href="${publication.href}">Open publication</a>`
+                : ""
+            }
+            ${
+              companionLinks.length > 0
+                ? `<div class="publication-item__resource-links">
+                    ${companionLinks
+                      .map(
+                        (resource) => `
+                          <a
+                            class="publication-item__resource-link"
+                            href="${resource.href}"
+                            aria-label="${resource.label}"
+                            title="${resource.label}"
+                          >
+                            ${publicationResourceIcons[resource.type] || publicationResourceIcons.website}
+                          </a>
+                        `
+                      )
+                      .join("")}
+                  </div>`
+                : ""
+            }
+          </div>`
+        : "";
     article.innerHTML = `
       ${publication.note ? `<div class="publication-item__badge"><span class="publication-item__badge-icon" aria-hidden="true">★</span><span>${publication.note}</span></div>` : ""}
       <h3>${publication.title}</h3>
       <p class="publication-item__meta">${publication.venue}</p>
       <p class="publication-item__authors">${highlightName(publication.authors)}</p>
-      ${publication.href ? `<a class="project-card__link" href="${publication.href}">Open publication</a>` : ""}
+      ${linksMarkup}
     `;
     return article;
   }
@@ -64,9 +170,11 @@ window.siteUtils = (() => {
   }
 
   return {
+    createProjectCard,
     createPublicationCard,
     highlightName,
     linkIcons,
+    projectLinkIcons,
     setAttr,
     setHtml,
     setText,

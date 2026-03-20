@@ -4,7 +4,7 @@ const profile = {
   selectedPublications: window.selectedPublicationTitles
 };
 
-const { createPublicationCard, linkIcons, setAttr, setHtml, setText, setupReveal } = window.siteUtils;
+const { createProjectCard, createPublicationCard, linkIcons, setAttr, setHtml, setText, setupReveal } = window.siteUtils;
 
 function renderLinks() {
   const container = document.getElementById("hero-links");
@@ -34,6 +34,17 @@ function renderInterests() {
   });
 }
 
+function renderProjects() {
+  const container = document.getElementById("projects-list");
+  if (!container) return;
+
+  profile.projects.slice(0, 4).forEach((project) => {
+    const article = createProjectCard(project);
+    article.setAttribute("data-reveal", "");
+    container.appendChild(article);
+  });
+}
+
 function renderPublications() {
   const container = document.getElementById("publications-list");
   if (!container) return;
@@ -45,7 +56,7 @@ function renderPublications() {
       : profile.publications.slice(0, 4);
 
   selectedPublications.forEach((publication) => {
-    const article = createPublicationCard(publication);
+    const article = createPublicationCard(publication, { showResources: true });
     article.setAttribute("data-reveal", "");
     container.appendChild(article);
   });
@@ -69,6 +80,7 @@ function init() {
 
   renderLinks();
   renderInterests();
+  renderProjects();
   renderPublications();
   setupReveal();
 }
