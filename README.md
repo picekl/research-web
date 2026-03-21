@@ -38,8 +38,45 @@ After the workflow finishes, the site should be available at:
 
 - [`index.html`](/Users/lukaspicek/Documents/Projects/research-web/index.html): page structure
 - [`styles.css`](/Users/lukaspicek/Documents/Projects/research-web/styles.css): visual design and responsive layout
+- [`data/site-config.js`](/Users/lukaspicek/Documents/Projects/research-web/data/site-config.js): site-level settings including analytics
 - [`data/profile-base.js`](/Users/lukaspicek/Documents/Projects/research-web/data/profile-base.js): core profile content
 - [`data/publications.js`](/Users/lukaspicek/Documents/Projects/research-web/data/publications.js): publications data and filter groups
+- [`js/analytics.js`](/Users/lukaspicek/Documents/Projects/research-web/js/analytics.js): shared analytics loader
 - [`js/common.js`](/Users/lukaspicek/Documents/Projects/research-web/js/common.js): shared DOM utilities and render helpers
 - [`js/home.js`](/Users/lukaspicek/Documents/Projects/research-web/js/home.js): homepage rendering
 - [`js/archive-page.js`](/Users/lukaspicek/Documents/Projects/research-web/js/archive-page.js): archive page rendering and filters
+
+## Analytics
+
+Analytics is controlled from [`data/site-config.js`](/Users/lukaspicek/Documents/Projects/research-web/data/site-config.js).
+
+Supported providers:
+
+- `goatcounter`
+- `plausible`
+
+Example GoatCounter setup:
+
+```js
+window.siteConfig = {
+  analytics: {
+    provider: "goatcounter",
+    goatcounterUrl: "https://YOURCODE.goatcounter.com/count",
+    plausibleDomain: "",
+    plausibleScriptUrl: ""
+  }
+};
+```
+
+Example Plausible setup:
+
+```js
+window.siteConfig = {
+  analytics: {
+    provider: "plausible",
+    goatcounterUrl: "",
+    plausibleDomain: "picekl.github.io",
+    plausibleScriptUrl: "https://plausible.io/js/pa-XXXXX.js"
+  }
+};
+```
