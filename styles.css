@@ -373,6 +373,10 @@ a {
 
 .panel {
   padding: 34px;
+  background: rgba(255, 250, 245, 0.72);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 14px 36px rgba(31, 35, 48, 0.05);
 }
 
 .panel__actions {
@@ -400,6 +404,38 @@ a {
   color: var(--accent);
   font-weight: 700;
   white-space: nowrap;
+}
+
+.panel--interests {
+  background: rgba(255, 250, 245, 0.74);
+}
+
+.panel--projects {
+  background: rgba(253, 248, 242, 0.75);
+}
+
+.panel--tools {
+  background: rgba(250, 248, 242, 0.76);
+}
+
+.panel--publications {
+  background: rgba(247, 248, 244, 0.76);
+}
+
+.panel--interests .section-heading span {
+  color: #9d6e4a;
+}
+
+.panel--projects .section-heading span {
+  color: #a37755;
+}
+
+.panel--tools .section-heading span {
+  color: #83775d;
+}
+
+.panel--publications .section-heading span {
+  color: #5e776c;
 }
 
 .interest-grid,

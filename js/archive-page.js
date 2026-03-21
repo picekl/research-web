@@ -149,9 +149,16 @@ function renderSelectFilter({ container, id, labelText, value, options, onChange
 }
 
 function renderArchive() {
+  const navName = document.getElementById("nav-name");
+  const navRole = document.getElementById("nav-role");
+  const navLocation = document.getElementById("nav-location");
   const container = document.getElementById("archive-list");
   const page = window.location.pathname.split("/").pop();
   if (!container) return;
+
+  if (navName) navName.textContent = profile.name;
+  if (navRole) navRole.textContent = profile.role;
+  if (navLocation) navLocation.textContent = "Cambridge, MA, USA";
 
   if (page === "projects.html") {
     profile.projects.forEach((item) => container.appendChild(createProjectCard(item)));
