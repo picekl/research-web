@@ -1,10 +1,56 @@
 const profile = {
   ...window.profileBase,
+  news: window.newsData,
   publications: window.publicationsData,
   selectedPublications: window.selectedPublicationTitles
 };
 
-const { createProjectCard, createPublicationCard, createToolCard, linkIcons, setAttr, setHtml, setText, setupReveal } = window.siteUtils;
+const { createNewsItem, createProjectCard, createPublicationCard, createToolCard, linkIcons, setAttr, setHtml, setText, setupReveal } = window.siteUtils;
+
+function getNewsYear(dateText) {
+  const match = String(dateText || "").match(/(\d{4})/);
+  return match ? match[1] : "";
+}
+
+function getNewsSortValue(dateText) {
+  const text = String(dateText || "").trim();
+  const yearMatch = text.match(/(\d{4})/);
+  const year = yearMatch ? Number(yearMatch[1]) : 0;
+  const monthMap = {
+    jan: 1,
+    january: 1,
+    feb: 2,
+    february: 2,
+    mar: 3,
+    march: 3,
+    apr: 4,
+    april: 4,
+    may: 5,
+    jun: 6,
+    june: 6,
+    jul: 7,
+    july: 7,
+    aug: 8,
+    august: 8,
+    sep: 9,
+    sept: 9,
+    september: 9,
+    oct: 10,
+    october: 10,
+    nov: 11,
+    november: 11,
+    dec: 12,
+    december: 12
+  };
+  const monthMatch = text.toLowerCase().match(/([a-z.]+)/);
+  const monthKey = monthMatch ? monthMatch[1].replace(".", "") : "";
+  const month = monthMap[monthKey] || 0;
+  return year * 100 + month;
+}
+
+function getSortedNews(items) {
+  return [...(items || [])].sort((left, right) => getNewsSortValue(right.date) - getNewsSortValue(left.date));
+}
 
 function renderLinks() {
   const container = document.getElementById("hero-links");
@@ -73,6 +119,29 @@ function renderPublications() {
   });
 }
 
+function renderNews() {
+  const container = document.getElementById("news-list");
+  if (!container) return;
+
+  const featuredNews = (profile.news || []).filter((item) => item.featured);
+  const homepageNews = featuredNews.length > 0 ? featuredNews : profile.news || [];
+  let currentYear = "";
+  getSortedNews(homepageNews).forEach((item) => {
+    const year = getNewsYear(item.date);
+    if (year && year !== currentYear) {
+      const divider = document.createElement("div");
+      divider.className = "timeline-year-divider";
+      divider.textContent = year;
+      container.appendChild(divider);
+      currentYear = year;
+    }
+
+    const article = createNewsItem(item, { compact: true });
+    article.setAttribute("data-reveal", "");
+    container.appendChild(article);
+  });
+}
+
 function init() {
   setText("nav-name", profile.name);
   setText("nav-role", profile.role);
@@ -94,6 +163,7 @@ function init() {
   renderProjects();
   renderTools();
   renderPublications();
+  renderNews();
   setupReveal();
 }
 

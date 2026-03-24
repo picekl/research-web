@@ -422,6 +422,10 @@ a {
   background: rgba(247, 248, 244, 0.76);
 }
 
+.panel--news {
+  background: rgba(247, 246, 242, 0.76);
+}
+
 .panel--interests .section-heading span {
   color: #9d6e4a;
 }
@@ -436,6 +440,10 @@ a {
 
 .panel--publications .section-heading span {
   color: #5e776c;
+}
+
+.panel--news .section-heading span {
+  color: #7a745d;
 }
 
 .interest-grid,
@@ -564,6 +572,30 @@ a {
 .timeline {
   display: grid;
   gap: 16px;
+}
+
+.timeline--compact {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.timeline-year-divider {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(31, 35, 48, 0.08);
+  color: var(--accent);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.timeline-year-divider:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }
 
 .publication-item {
@@ -777,19 +809,99 @@ a {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 140px minmax(0, 1fr);
-  gap: 18px;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 14px;
   align-items: start;
 }
 
 .timeline-item__body {
-  display: grid;
+  position: relative;
+  padding-left: 12px;
+}
+
+.timeline-item__body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.22em;
+  bottom: 0.22em;
+  width: 2px;
+  border-radius: 999px;
+  background: rgba(31, 35, 48, 0.12);
+}
+
+.timeline-item--featured .timeline-item__body::before {
+  background: rgba(167, 119, 79, 0.5);
+}
+
+.timeline-item--compact {
+  grid-template-columns: 76px minmax(0, 1fr);
   gap: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  align-items: center;
+}
+
+.timeline-item__body {
+  display: grid;
+  gap: 6px;
 }
 
 .timeline-item time {
   font-weight: 700;
   color: var(--accent);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.timeline-item__date {
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  padding-left: 6px;
+}
+
+.timeline-item p {
+  line-height: 1.62;
+}
+
+.timeline-item p em {
+  font-style: italic;
+}
+
+.timeline-item__text--bold {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.timeline-item--compact time {
+  font-size: 0.83rem;
+  letter-spacing: 0.02em;
+}
+
+.timeline-item--compact p {
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.timeline-item--compact .timeline-item__body {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.timeline-item--compact .timeline-item__body p {
+  flex: 1;
+}
+
+.timeline-item--compact .project-card__link {
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-top: 0;
+  font-size: 0.94rem;
 }
 
 .contact-card {

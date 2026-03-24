@@ -148,28 +148,6 @@ window.profileBase = {
       ]
     }
   ],
-  news: [
-    {
-      date: "February 2026",
-      text: "Co-authored CzechLynx, a new dataset for individual identification and pose estimation of Eurasian lynx.",
-      href: "https://www.nature.com/articles/s41597-026-06853-9"
-    },
-    {
-      date: "June 2025",
-      text: "Published FungiTastic, a multimodal benchmark for large-scale fungi categorization.",
-      href: "https://openaccess.thecvf.com/content/CVPR2025W/FGVC/html/Picek_FungiTastic_A_Multi-Modal_Dataset_and_Benchmark_for_Image_Categorization_CVPRW_2025_paper.html"
-    },
-    {
-      date: "January 2024",
-      text: "Published WildlifeDatasets, an open-source toolkit for animal re-identification.",
-      href: "https://github.com/WildlifeDatasets/wildlife-tools"
-    },
-    {
-      date: "2022",
-      text: "Released work on global snake identification for health and herpetology applications.",
-      href: "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0010944"
-    }
-  ],
   contactCopy:
     "I’m happy to connect about research collaborations, biodiversity AI, wildlife identification, multimodal learning, and applied computer vision projects."
 };

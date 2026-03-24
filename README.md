@@ -4,10 +4,11 @@ This is a lightweight one-page research profile site inspired by academic person
 
 ## Edit your content
 
-Most of the profile content lives in [`data/profile-base.js`](/Users/lukaspicek/Documents/Projects/research-web/data/profile-base.js) and [`data/publications.js`](/Users/lukaspicek/Documents/Projects/research-web/data/publications.js):
+Most of the profile content lives in [`data/profile-base.js`](/Users/lukaspicek/Documents/Projects/research-web/data/profile-base.js), [`data/news.js`](/Users/lukaspicek/Documents/Projects/research-web/data/news.js), and [`data/publications.js`](/Users/lukaspicek/Documents/Projects/research-web/data/publications.js):
 
 - `profileBase.name`, `profileBase.role`, `profileBase.summary`
-- `profileBase.bio`, `profileBase.interests`, `profileBase.projects`, `profileBase.news`
+- `profileBase.bio`, `profileBase.interests`, `profileBase.projects`
+- `newsData`
 - `profileBase.links`, `profileBase.email`, `profileBase.image`
 - `publicationsData`, `selectedPublicationTitles`, `publicationFilterGroups`
 
@@ -40,6 +41,7 @@ After the workflow finishes, the site should be available at:
 - [`styles.css`](/Users/lukaspicek/Documents/Projects/research-web/styles.css): visual design and responsive layout
 - [`data/site-config.js`](/Users/lukaspicek/Documents/Projects/research-web/data/site-config.js): site-level settings including analytics
 - [`data/profile-base.js`](/Users/lukaspicek/Documents/Projects/research-web/data/profile-base.js): core profile content
+- [`data/news.js`](/Users/lukaspicek/Documents/Projects/research-web/data/news.js): updates and news timeline entries
 - [`data/publications.js`](/Users/lukaspicek/Documents/Projects/research-web/data/publications.js): publications data and filter groups
 - [`js/analytics.js`](/Users/lukaspicek/Documents/Projects/research-web/js/analytics.js): shared analytics loader
 - [`js/common.js`](/Users/lukaspicek/Documents/Projects/research-web/js/common.js): shared DOM utilities and render helpers

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All News | Lukas Picek</title>
+    <title>Updates and News | Lukas Picek</title>
     <meta
       name="description"
-      content="News and updates from Lukas Picek's research profile."
+      content="Updates and news from Lukas Picek's research profile."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +17,7 @@
     <script defer src="./data/site-config.js"></script>
     <script defer src="./js/analytics.js"></script>
     <script defer src="./data/profile-base.js"></script>
+    <script defer src="./data/news.js"></script>
     <script defer src="./data/publications.js"></script>
     <script defer src="./js/common.js"></script>
     <script defer src="./js/archive-page.js"></script>
@@ -45,6 +46,7 @@
               <a href="./projects.html" data-goatcounter-click="nav-projects" data-goatcounter-title="Sidebar nav: Projects">Projects</a>
               <a href="./index.html#tools" data-goatcounter-click="nav-tools" data-goatcounter-title="Sidebar nav: Tools">Tools</a>
               <a href="./publications.html" data-goatcounter-click="nav-publications" data-goatcounter-title="Sidebar nav: Publications">Publications</a>
+              <a href="./news.html" aria-current="page" data-goatcounter-click="nav-news" data-goatcounter-title="Sidebar nav: Updates and News">Updates and News</a>
               <a href="./index.html#contact" data-goatcounter-click="nav-contact" data-goatcounter-title="Sidebar nav: Contact">Contact</a>
             </nav>
           </div>
@@ -59,15 +61,14 @@
         <header class="subpage-hero">
           <a class="subpage-hero__back" href="./index.html">Back to home</a>
           <p class="hero__kicker">Research Archive</p>
-          <h1>All News</h1>
+          <h1>Updates and News</h1>
           <p class="subpage-hero__summary">
-            Recent milestones, publications, and updates across ongoing research
-            work and collaborations.
+            Recent milestones, awards, talks, publications, and other public-facing updates.
           </p>
         </header>
 
         <main class="panel">
-          <div id="archive-list" class="timeline"></div>
+          <div id="archive-list" class="timeline timeline--compact"></div>
         </main>
       </div>
     </div>

@@ -134,6 +134,48 @@ window.siteUtils = (() => {
     return createLinkedCard(tool, "tool-card");
   }
 
+  function formatNewsDate(dateText) {
+    const text = String(dateText || "").trim();
+    const parts = text.split(/\s+/).filter(Boolean);
+    if (parts.length < 2) return text;
+
+    const first = parts[0];
+    const second = parts[1];
+    const firstIsYear = /^\d{4}$/.test(first);
+    const secondIsYear = /^\d{4}$/.test(second);
+
+    if (firstIsYear) {
+      return second;
+    }
+
+    if (secondIsYear) {
+      return first;
+    }
+
+    return text;
+  }
+
+  function createNewsItem(item, options = {}) {
+    const article = document.createElement("article");
+    article.className = "timeline-item";
+    if (options.compact) article.classList.add("timeline-item--compact");
+    if (item.featured) article.classList.add("timeline-item--featured");
+    const isBold = Boolean(item.bold || item.featured);
+    const textClass = isBold ? "timeline-item__text timeline-item__text--bold" : "timeline-item__text";
+    article.innerHTML = `
+      <time class="timeline-item__date" datetime="${item.date}">${formatNewsDate(item.date)}</time>
+      <div class="timeline-item__body">
+        <p class="${textClass}">${item.text}</p>
+        ${
+          item.href
+            ? `<a class="project-card__link" href="${item.href}">${options.compact ? "Link" : "Read more"}</a>`
+            : ""
+        }
+      </div>
+    `;
+    return article;
+  }
+
   function createPublicationCard(publication, options = {}) {
     const article = document.createElement("article");
     article.className = "publication-item";
@@ -198,6 +240,7 @@ window.siteUtils = (() => {
   return {
     createProjectCard,
     createToolCard,
+    createNewsItem,
     createPublicationCard,
     highlightName,
     linkIcons,
