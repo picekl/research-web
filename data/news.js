@@ -1,5 +1,10 @@
 // `featured` controls homepage selection. `bold` controls stronger line emphasis.
 window.newsData = [
+    {
+    date: "2026 June",
+    text: "Published ACCIDENT, a benchmark dataset for vehicle accident detection from traffic surveillance videos",
+    href: "https://accidentbench.github.io"
+  },
   {
     date: "2026 March",
     text: "Selected as an Area Chair for NeurIPS 2026.",

@@ -36,6 +36,14 @@ window.selectedPublicationTitles = [
 ];
 
 window.publicationsData = [
+     {
+    year: 2026,
+    title: "ACCIDENT: A Benchmark Dataset for Vehicle Accident Detection from Traffic Surveillance Videos",
+    venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2026",
+    authors: "Lukas Picek, Michal Cermak, Marek Hanzl, and Vojtech Cermak",
+    href: "https://arxiv.org/abs/2604.09819",
+    topics: ["Autonomous Driving", "Benchmarks", "Applied AI", "Datasets"]
+  },
   {
     year: 2026,
     title: "CzechLynx: A Dataset for Individual Identification and Pose Estimation of the Eurasian Lynx",
@@ -56,6 +64,14 @@ window.publicationsData = [
     ],
     publicationType: "Journal",
     topics: ["Wildlife Re-Identification", "Pose Estimation", "Datasets"]
+  },
+  {
+    year: 2026,
+    title: "LifeCLEF 2026 Teaser: AI Challenges for Biodiversity Understanding and Ecosystem Management",
+    venue: "ECIR 2026",
+    authors: "Alexis Joly, Lukáš Picek, Stefan Kahl, Hervé Goëau, Lukáš Adam, Robert Bossy, Kostas Papafitsoros, Vojtěch Čermák, and others. ",
+    href: "https://link.springer.com/chapter/10.1007/978-3-032-21321-1_39",
+    topics: ["LifeCLEF", "Benchmarks"]
   },
   {
     year: 2025,
