@@ -1,6 +1,12 @@
 // `featured` controls homepage selection. `bold` controls stronger line emphasis.
 window.newsData = [
-    {
+  {
+    date: "2026 May",
+    featured: true,
+    text: "Recognized as an Outstanding Reviewer at CVPR 2026.",
+    href: "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf"
+  },
+  {
     date: "2026 June",
     text: "Published ACCIDENT, a benchmark dataset for vehicle accident detection from traffic surveillance videos",
     href: "https://accidentbench.github.io"
@@ -23,14 +29,14 @@ window.newsData = [
   {
     date: "2025 June",
     featured: true,
-    text: "Recognized as an Outstanding Reviewer at CVPR 2025.",
-    href: "https://cvpr.thecvf.com/Conferences/2025/ProgramCommittee#all-outstanding-reviewer"
-  },
-  {
-    date: "2025 June",
-    featured: true,
     text: "Served as main organizer for the Animal Re-Identification tutorial at CVPR 2025.",
     href: "https://sites.google.com/view/animal-reid/"
+  },
+  {
+    date: "2025 May",
+    featured: true,
+    text: "Recognized as an Outstanding Reviewer at CVPR 2025.",
+    href: "https://cvpr.thecvf.com/Conferences/2025/ProgramCommittee#all-outstanding-reviewer"
   },
   {
     date: "2026 February",
